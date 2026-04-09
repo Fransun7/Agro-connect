@@ -4,10 +4,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const closeBtn = document.getElementById("close-button");
 
   hamburger.addEventListener("click", () => {
-    sideMenu.classList.remove("translate-x-full");
+    sideMenu.classList.remove("-translate-x-full");
 
     closeBtn.addEventListener("click", () => {
-      sideMenu.classList.add("translate-x-full");
+      sideMenu.classList.add("-translate-x-full");
     });
   });
 });
