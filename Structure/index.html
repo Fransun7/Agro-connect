@@ -4,93 +4,133 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Landing Page</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
-  </head>
-  <body  class="bg-white p-6">
-  <nav class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-4 py-3 bg-white shadow-md gap-5">
-  
-  <!-- Logo -->
-  <div class="flex w-1/5 basis-[20%]">
-    <img src="./logo.png" alt="logo">
-  </div>
+  <body class="bg-gray-50">
+    <nav
+      id="navigation"
+      class="bg-white grid grid-cols-[30%_70%] md:grid-cols-[15%_45%_40%] text-white fixed top-0 left-0  pt-5 gap-2 w-full items-center px-4 py-3 z-50 shadow-md md:px-10"
+    >
+      <!-- logo container -->
+      <div id="logo-div" class="dlex items-center justify-center">
+        <img src="./logo.png" alt="" />
+      </div>
 
-  <!-- Search -->
-  <div class="basis-[50%] flex items-center border border-gray-300 rounded-full px-3 py-1.5">
-    <input
-      type="text"
-      placeholder="Search..."
-      class="outline-none w-full text-sm text-gray-600 bg-transparent"
-    />
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z" />
-    </svg>
-  </div>
+      <!-- search input hidden on mobile -->
+      <!-- From Uiverse.io by RashadGhzi -->
+      <div
+        class="hidden md:flex w-full bg-white rounded-lg font-mono justify-end items-center"
+      >
+        <input
+          class="text-sm custom-input w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm transition duration-300 ease-in-out transform focus:-translate-y-1 focus:outline-blue-300 hover:shadow-lg hover:border-blue-300 bg-gray-100"
+          placeholder="Enter text here"
+          type="text"
+          id="unique-input"
+        />
+      </div>
 
-  <!-- menu -->
-   <div class="basis-[30%] flex w-2/5 md:hidden">
+      <!-- menu, hidden on desktop -->
+      <div class="flex md:hidden items-center justify-center gap-10">
+        <a href="">
+         <div
+          class="flex justify-center items-center gap-12 h-full text-green-800"
+        >
+          <div
+            class="bg-gradient-to-b from-stone-300/40 to-transparent p-[4px] rounded-[16px]"
+          >
+            <button
+              class="group p-[4px] rounded-[12px] bg-gradient-to-b from-white to-stone-200/40 shadow-[0_1px_3px_rgba(0,0,0,0.5)] active:shadow-[0_0px_1px_rgba(0,0,0,0.5)] active:scale-[0.995]"
+            >
+              <div
+                class="bg-gradient-to-b from-stone-200/40 to-white/80 rounded-[8px] px-1 py-1"
+              >
+                <div class="flex gap-2 items-center">
+                  <span class="font-semibold text-base">Get Started</span>
+                </div>
+              </div>
+            </button>
+          </div>
+        </div>
+        </a>
 
-     </a>
-     <button id="hamburger" class="text-gray-700 focus:outline-none">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-      </svg>
-    </button>
-   </div>
+        <!-- hamburger -->
+        <button id="hamburger" class="text-gray-700 focus:outline-none flex justify-end">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
 
-    <!-- Desktop Menu - hidden on mobile -->
-<div class="basis-[40%] hidden md:flex items-center justify-end gap-1">
-  
-  <a href="#" class="flex items-center gap-1.5 text-green-800 text-lg font-medium px-3 py-2 rounded-full hover:bg-green-700 hover:text-white transition-colors duration-200">
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-    </svg>
-    Home
-  </a>
-
-  <a href="#" class="flex items-center gap-1.5 text-green-800 text-lg font-medium px-3 py-2 rounded-full hover:bg-green-700 hover:text-white transition-colors duration-200">
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
-    </svg>
-    Products
-  </a>
-
-  <a href="#" class="flex items-center gap-1.5 text-green-800 text-lg font-medium px-3 py-2 rounded-full hover:bg-green-700 hover:text-white transition-colors duration-200">
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-    </svg>
-    Dashboard
-  </a>
-
-   <a href="#" class="flex items-center gap-1.5 text-green-800 text-lg font-medium px-3 py-2 rounded-full hover:bg-green-700 hover:text-white transition-colors duration-200">
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-    </svg>
-    Login
-  </a>
-
-  
-
-  
- 
-
-</div>
-</nav>
+      <!-- hidden on mobile -->
+      <div class="basis-[40%] hidden md:flex items-center justify-end gap-8">
+        <a
+          href="#"
+          class="text-gray-700 text-sm font-medium hover:bg-green-600 hover:rounded-full hover:text-white hover:px-4 py-2"
+          >Home</a
+        >
+        <a
+          href="#"
+          class="text-gray-700 text-sm font-medium hover:bg-green-600 hover:rounded-full hover:text-white hover:px-4 py-2"
+          >Products</a
+        >
+        <a
+          href="#"
+          class="text-gray-700 text-sm font-medium hover:bg-green-600 hover:rounded-full hover:text-white hover:px-4 py-2"
+          >Dashboard</a
+        >
+        <a
+          href="#"
+          class="text-gray-700 text-sm font-medium hover:bg-green-600 hover:rounded-full hover:text-white hover:px-4 py-2"
+          >Login</a
+        >
+        <!-- From Uiverse.io by pruthivithejan -->
+        <div
+          class="flex justify-center items-center gap-12 h-full text-green-800"
+        >
+          <div
+            class="bg-gradient-to-b from-stone-300/40 to-transparent p-[4px] rounded-[16px]"
+          >
+            <button
+              class="group p-[1px] rounded-[12px] bg-gradient-to-b from-white to-stone-200/40 shadow-[0_1px_3px_rgba(0,0,0,0.5)] active:shadow-[0_0px_1px_rgba(0,0,0,0.5)] active:scale-[0.995]"
+            >
+              <div
+                class="bg-gradient-to-b from-stone-200/40 to-white/80 rounded-[8px] px-1 py-1"
+              >
+                <div class="flex gap-2 items-center">
+                  <span class="font-semibold text-base">Get Started</span>
+                </div>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
 
 <div id="sideMenu" class="fixed top-0 right-0 h-full w-64 bg-white z-50 shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out">
-  
-  <!-- Close Button -->
   <div class="flex justify-end p-4">
-    <button class="text-gray-700 bg-orange-600"> 
+    <button id="close-button" class="text-gray-700">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
       </svg>
     </button>
   </div>
 
-  <!-- Side Menu Links -->
-  <nav class="flex flex-col px-6 gap-6 mt-4">
+    <nav class="flex flex-col px-6 gap-6 mt-4">
     <a href="#" class="flex items-center gap-3 text-gray-700 text-sm font-medium hover:text-green-600">
   <i class="fa-solid fa-house"></i> Home
 </a>
@@ -108,10 +148,9 @@
 </a>
   </nav>
 
-  
-
 </div>
-  
-<script src="./script.js"></script>
+
+    
+    <script src="./script.js"></script>
   </body>
-</html>
+</html
